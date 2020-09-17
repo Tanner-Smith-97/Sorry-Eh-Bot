@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new discord.Client();
+
 const bot = new Discord.Client();
 
 const Landon = "140205912727093248";
@@ -20,7 +20,7 @@ bot.on('ready', () => {
 })
 
 //auto roles
-client.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.find(ch.name === 'spam');
 
     if(!channel) return;
