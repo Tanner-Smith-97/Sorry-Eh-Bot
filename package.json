@@ -9,6 +9,8 @@
   "author": "Tanner",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "discord.js": "^12.3.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.5"
   }
 }
