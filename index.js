@@ -21,11 +21,20 @@ bot.on('ready', () => {
 
 //auto roles
 bot.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.cache.find(ch.name === 'spam');
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'spam');
 
-    if(!channel) return;
+    if(!channel)
+    { 
+    console.log("Could not find Spam") 
+    return;
+    }
 
-    channel.send('Welcome to the server, ${member}');
+    console.log(`Welcome to the server, ${member}`);
+    channel.send(`Welcome to the server, ${member}`);
+
+    member.roles.set(['643678930754076712'])
+        .then(console.log)
+        .catch(console.error);
 })
 
 
@@ -45,26 +54,8 @@ bot.on('message', msg => {
     }
 })
 
+
 /*
-bot.on('message', msg => {
-    var d = new Date(); //current time
-    //console.log(d.getHours());
-
-    if (!landonCooldown.has(msg.author.id)) {
-        if (msg.author.id === Landon && (d.getHours() >= 3 && d.getHours() <= 11)) {
-            //msg.reply('Mock Landon');
-            msg.reply('https://cdn.discordapp.com/attachments/751951417207422976/752783620099276921/SmartSelect_20200907-055103_Twitter.png');
-            landonCooldown.add(msg.author.id);
-            setTimeout(() => {
-                // Removes the user from the set after 5 hours
-                landonCooldown.delete(msg.author.id);
-            }, 90);
-        }
-    }
-
-})
-*/
-
 bot.on('message', msg => {
     var d = new Date(); //current time
     //console.log(d.getHours());
@@ -74,6 +65,7 @@ bot.on('message', msg => {
         msg.reply('https://cdn.discordapp.com/attachments/751951417207422976/752783620099276921/SmartSelect_20200907-055103_Twitter.png');
     }
 })
+*/
 
 bot.on('message', msg => {
     var d = new Date(); //current time
