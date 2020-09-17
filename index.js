@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-
+const client = new discord.Client();
 const bot = new Discord.Client();
 
 const Landon = "140205912727093248";
@@ -17,6 +17,15 @@ bot.on('ready', () => {
 
     console.log('This bot is online!');
 
+})
+
+//auto roles
+client.on('guildMemberAdd', member => {
+    const channel = member.guild.channels.cache.find(ch.name === 'spam');
+
+    if(!channel) return;
+
+    channel.send('Welcome to the server, ${member}');
 })
 
 
