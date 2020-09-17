@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+
 const bot = new Discord.Client();
 
 const Landon = "140205912727093248";
@@ -8,7 +9,7 @@ const commandCooldown = new Set();
 const landonCooldown = new Set();
 //var d = new Date(); //current time
 
-const token = 'NzUyNzg4NDYwMTEyMTgzMzc4.X1cu4w.J8iuCwWQt1Hizaq4AfRwQ-iYUa4';
+let token = process.env.discordToken;
 
 
 
