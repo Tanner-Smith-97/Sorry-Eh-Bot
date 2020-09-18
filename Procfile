@@ -1,1 +1,1 @@
-worker:ts-node/build/index.js
+web:ts-node/src/index.ts
