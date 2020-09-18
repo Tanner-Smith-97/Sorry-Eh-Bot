@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const { mongo } = require('mongoose');
-
+const dotenv = require('dotenv');
+dotenv.config();
 
 const bot = new Discord.Client();
 
@@ -14,11 +15,12 @@ const rolePoutine = "481987772043755530";
 const commandCooldown = new Set();
 const landonCooldown = new Set();
 
-let token = process.env.discordToken;
+// Get environment variables
+const token = process.env.DISCORD_TOKEN;
+const connectionString = process.env.MONGO_DATABASE_PASSWORD;
 
 // Retrieve
 const MongoClient = require('mongodb').MongoClient;
-const connectionString = process.env.connectionString;
 const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
