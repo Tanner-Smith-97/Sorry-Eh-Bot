@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm ci && npm run-script build",
+    "start": "npm run-script build:prod",
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "nodemon",
+    "build:prod": "tsc",
     "build": "rimraf ./build && tsc"
   },
   "author": "Tanner",
