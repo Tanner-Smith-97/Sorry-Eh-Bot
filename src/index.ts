@@ -71,6 +71,24 @@ bot.on('message', msg => {
     if(msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongoKayden") {
         //connect to client
         const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
+<<<<<<< Updated upstream
+=======
+       
+        console.log("Point 2");
+        client.connect(async err => {
+
+            console.log("Point 3");
+            const collection = await client.db("game").collection("gameCollection");
+            console.log("point 4");
+            const outPut = await collection.find().toArray();
+            console.log("point 5");
+            console.log(outPut);
+
+            msg.reply(`You have ${outPut[0].points} points`);
+
+
+        })
+>>>>>>> Stashed changes
 
         client.connect(async err => {
             const collection = await client.db("game").collection("gameCollection");
