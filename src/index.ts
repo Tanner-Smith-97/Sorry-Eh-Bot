@@ -8,17 +8,20 @@ dotenv.config();
 const bot = new DiscordClient();
 
 
-
 const commandCooldown = new Set();
 const landonCooldown = new Set();
 
 // Get environment variables
 const token = process.env.DISCORD_TOKEN;
-const connectionString = process.env.MONGO_DATABASE_PASSWORD;
+const mongodbPassword = process.env.MONGO_DATABASE_PASSWORD;
+const mongodbName = process.env.MONGO_DATABASE_DB_NAME;
+const connectionString = `mongodb+srv://Wc6a4MhgWkQkc2u2x8:${mongodbPassword}@sorryehcluster.tqfuh.azure.mongodb.net/${mongodbName}?retryWrites=true&w=majority`;
+
+
 
 // Retrieve
 //const MongoClient = require('mongodb').MongoClient;
-const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 
 
@@ -79,6 +82,29 @@ bot.on('message', msg => {
 */
 
 bot.on('message', msg => {
+    if(msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongo") {
+        //connect to client
+        console.log("point 1");
+
+        const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
+       
+        console.log("Point 2");
+        client.connect(async err => {
+
+            console.log("Point 3");
+            const collection = await client.db("game").collection("gameCollection");
+
+            console.log("point 4");
+
+
+        })
+
+        client.close();
+    }
+})
+
+/*
+bot.on('message', msg => {
     if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongo") {
         client.connect(async err => {
 
@@ -94,9 +120,12 @@ bot.on('message', msg => {
         });
     }
 })
+*/
 
 bot.on('message', msg => {
     if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongoAddPoints") {
+            //connect to client
+            const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
         client.connect(async err => {
