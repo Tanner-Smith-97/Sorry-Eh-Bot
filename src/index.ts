@@ -1,9 +1,7 @@
 import { GuildMember, Message, Client as DiscordClient } from "discord.js";
-import * as dotenv from "dotenv";
 import { MongoClient, ObjectId } from "mongodb";
 import PlayerModel from "./player-model";
 import ServerConstants from "./server-constants";
-dotenv.config();
 
 const bot = new DiscordClient();
 
