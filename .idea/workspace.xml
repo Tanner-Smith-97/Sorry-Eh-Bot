@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f759896-1ec3-4ad3-bb75-aa180f3495b6" name="Default Changelist" comment="Fixed weird">
+    <list default="true" id="2f759896-1ec3-4ad3-bb75-aa180f3495b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="configTypescript" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,16 +28,46 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="ts.external.directory.path" value="E:\Personal\Discord\Sorry-Eh-Bot\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Personal\Discord\Sorry-Eh-Bot" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="debug" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="debug" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.debug" />
+      <item itemvalue="npm.build" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,6 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600395781673</updated>
       <workItem from="1600395782743" duration="686000" />
+      <workItem from="1600447653355" duration="2788000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed issue with mongo not being able to update the value">
       <created>1600410784438</created>
@@ -67,14 +98,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed issue with mongo not being able to update the value" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="235" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600450831714">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="414" y="235" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600450831714" />
     <state x="734" y="382" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600396338127">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="734" y="382" key="#com.intellij.fileTypes.FileTypeChooser/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396338127" />
-    <state x="585" y="148" key="CommitChangelistDialog2" timestamp="1600411343513">
+    <state x="585" y="148" key="CommitChangelistDialog2" timestamp="1600450800077">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="585" y="148" key="CommitChangelistDialog2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600411343513" />
+    <state x="585" y="148" key="CommitChangelistDialog2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600450800077" />
     <state width="1899" height="396" key="GridCell.Tab.0.bottom" timestamp="1600411318483">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -143,21 +178,25 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="461" y="225" key="SettingsEditor/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600395885849" />
-    <state x="552" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600410786993">
+    <state x="552" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600450788811">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="300" key="Vcs.Push.Dialog.v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600410786993" />
-    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600411313970">
+    <state x="552" y="300" key="Vcs.Push.Dialog.v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600450788811" />
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600448374608">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600411313970" />
-    <state x="1920" y="0" width="1575" height="798" maximized="true" key="dock-window-1" timestamp="1600396229378">
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600448374608" />
+    <state x="2136" y="0" width="1572" height="1147" maximized="true" key="dock-window-1" timestamp="1600448308727">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
-    <state x="1920" y="0" width="1575" height="798" maximized="true" key="dock-window-1/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396229378" />
+    <state x="2136" y="0" width="1572" height="1147" maximized="true" key="dock-window-1/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600448308727" />
     <state x="740" y="293" key="git4idea.branch.GitSmartOperationDialog" timestamp="1600396175265">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="740" y="293" key="git4idea.branch.GitSmartOperationDialog/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396175265" />
+    <state x="743" y="481" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600448361793">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="743" y="481" key="git4idea.remote.GitConfigureRemotesDialog/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600448361793" />
   </component>
 </project>
