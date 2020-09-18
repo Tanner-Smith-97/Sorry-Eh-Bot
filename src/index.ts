@@ -106,11 +106,12 @@ bot.on('message', msg => {
 
         client.connect(async err => {
 
+            /*
            await pointSchema.findOneAndUpdate(
                 {_id: '5f631363aa7d05d7547c6d61' },
                 {points: 10}
             )
-
+            */
             /*
             try {
                 const collection = await client.db("game").collection("gameCollection");
