@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f759896-1ec3-4ad3-bb75-aa180f3495b6" name="Default Changelist" comment="Fixed weird">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+    <list default="true" id="2f759896-1ec3-4ad3-bb75-aa180f3495b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +12,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="configTypescript" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,16 +27,46 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="ts.external.directory.path" value="E:\Personal\Discord\Sorry-Eh-Bot\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Personal\Discord\Sorry-Eh-Bot" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="debug" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="debug" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.debug" />
+      <item itemvalue="npm.build" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600395781673</updated>
       <workItem from="1600395782743" duration="686000" />
+      <workItem from="1600447653355" duration="8681000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed issue with mongo not being able to update the value">
       <created>1600410784438</created>
@@ -56,7 +86,105 @@
       <option name="project" value="LOCAL" />
       <updated>1600410784438</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update heroku Procfile&#10;Add npm commands to idea">
+      <created>1600450856531</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600450856531</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add start script to npm">
+      <created>1600453062713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600453062713</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add start script to npm">
+      <created>1600453271403</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600453271403</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update package.json">
+      <created>1600454136262</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600454136262</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Still working on pipelines script">
+      <created>1600454235967</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600454235967</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Still working on pipelines script">
+      <created>1600454343208</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600454343208</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Still working on pipelines script">
+      <created>1600454541928</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600454541928</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Still working on pipelines script">
+      <created>1600454639542</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1600454639542</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Still working on pipelines script">
+      <created>1600457269876</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1600457269876</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Still working on pipelines script">
+      <created>1600457535948</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1600457535948</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Still working on pipelines script">
+      <created>1600457724504</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1600457724504</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Still working on pipelines script">
+      <created>1600457982183</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1600457982183</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Still working on pipelines script">
+      <created>1600458095462</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1600458095462</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Still working on pipelines script">
+      <created>1600458171102</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1600458171102</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -64,17 +192,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed issue with mongo not being able to update the value" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue with mongo not being able to update the value" />
+    <MESSAGE value="Update heroku Procfile&#10;Add npm commands to idea" />
+    <MESSAGE value="Add start script to npm" />
+    <MESSAGE value="Update package.json" />
+    <MESSAGE value="Still working on pipelines script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Still working on pipelines script" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="235" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600450831714">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="414" y="235" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600450831714" />
     <state x="734" y="382" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600396338127">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="734" y="382" key="#com.intellij.fileTypes.FileTypeChooser/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396338127" />
-    <state x="585" y="148" key="CommitChangelistDialog2" timestamp="1600411343513">
+    <state x="585" y="148" key="CommitChangelistDialog2" timestamp="1600458170681">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="585" y="148" key="CommitChangelistDialog2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600411343513" />
+    <state x="585" y="148" key="CommitChangelistDialog2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600458170681" />
     <state width="1899" height="396" key="GridCell.Tab.0.bottom" timestamp="1600411318483">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -143,21 +279,25 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="461" y="225" key="SettingsEditor/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600395885849" />
-    <state x="552" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600410786993">
+    <state x="552" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600458172347">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="300" key="Vcs.Push.Dialog.v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600410786993" />
-    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600411313970">
+    <state x="552" y="300" key="Vcs.Push.Dialog.v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600458172347" />
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600448374608">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600411313970" />
-    <state x="1920" y="0" width="1575" height="798" maximized="true" key="dock-window-1" timestamp="1600396229378">
-      <screen x="1920" y="0" width="1920" height="1160" />
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600448374608" />
+    <state x="90" y="371" width="1572" height="1147" key="dock-window-1" timestamp="1600457263839">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="1920" y="0" width="1575" height="798" maximized="true" key="dock-window-1/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396229378" />
+    <state x="90" y="371" width="1572" height="1147" key="dock-window-1/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600457263839" />
     <state x="740" y="293" key="git4idea.branch.GitSmartOperationDialog" timestamp="1600396175265">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="740" y="293" key="git4idea.branch.GitSmartOperationDialog/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396175265" />
+    <state x="743" y="481" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600448361793">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="743" y="481" key="git4idea.remote.GitConfigureRemotesDialog/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600448361793" />
   </component>
 </project>
