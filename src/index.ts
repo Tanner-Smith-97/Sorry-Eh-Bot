@@ -1,6 +1,7 @@
-import {GuildMember, Message, Client as DiscordClient} from "discord.js";
+import { GuildMember, Message, Client as DiscordClient } from "discord.js";
 import * as dotenv from "dotenv";
-import {MongoClient, ObjectId} from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
+import PlayerModel from "./player-model";
 import ServerConstants from "./server-constants";
 dotenv.config();
 
@@ -55,6 +56,7 @@ bot.on('message', msg => {
 });
 
 
+//leagcy code, we still need this
 /*
 bot.on('message', msg => {
     var d = new Date(); //current time
@@ -70,7 +72,7 @@ bot.on('message', msg => {
 
 //reads from DB
 bot.on('message', msg => {
-    if(msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongoKayden") {
+    if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongoKayden") {
         //connect to client
         const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -117,6 +119,35 @@ bot.on('message', msg => {
                 .then((value) => {
                     console.log(value);
                 });
+        });
+
+        client.close()
+            .catch(msg => {
+                console.log("Bro you borked it")
+            });
+    }
+});
+
+//adds new player
+bot.on('message', msg => {
+    if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!joinGame") {
+        //connect to client
+        const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
+
+        client.connect(async err => {
+            const collection = await client.db("game").collection("gameCollection");
+
+            const points = await collection.find().toArray() as PlayerModel[];
+
+            if (!points.find(pm => pm.playerId === msg.member.id)) {
+                //do stuff if not found
+                collection.insertOne(new PlayerModel(msg.member.id));
+            }
+            else {
+                //do nothing if found
+                console.log("Player already is in system");
+            }
+
         });
 
         client.close()
