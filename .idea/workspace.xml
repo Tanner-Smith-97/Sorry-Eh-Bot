@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f759896-1ec3-4ad3-bb75-aa180f3495b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.default" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server-constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server-constants.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -58,26 +60,30 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="734" y="382" key="#com.intellij.fileTypes.FileTypeChooser/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396338127" />
-    <state width="1899" height="321" key="GridCell.Tab.0.bottom" timestamp="1600396377191">
+    <state width="1899" height="396" key="GridCell.Tab.0.bottom" timestamp="1600409611509">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1899" height="321" key="GridCell.Tab.0.bottom/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396377191" />
-    <state width="1899" height="321" key="GridCell.Tab.0.center" timestamp="1600396377191">
+    <state width="1899" height="396" key="GridCell.Tab.0.bottom/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600409611509" />
+    <state width="1899" height="396" key="GridCell.Tab.0.center" timestamp="1600409611509">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1899" height="321" key="GridCell.Tab.0.center/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396377191" />
-    <state width="1899" height="321" key="GridCell.Tab.0.left" timestamp="1600396377191">
+    <state width="1899" height="396" key="GridCell.Tab.0.center/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600409611509" />
+    <state width="1899" height="396" key="GridCell.Tab.0.left" timestamp="1600409611509">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1899" height="321" key="GridCell.Tab.0.left/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396377191" />
-    <state width="1899" height="321" key="GridCell.Tab.0.right" timestamp="1600396377191">
+    <state width="1899" height="396" key="GridCell.Tab.0.left/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600409611509" />
+    <state width="1899" height="396" key="GridCell.Tab.0.right" timestamp="1600409611509">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1899" height="321" key="GridCell.Tab.0.right/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396377191" />
+    <state width="1899" height="396" key="GridCell.Tab.0.right/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600409611509" />
     <state x="461" y="225" key="SettingsEditor" timestamp="1600395885849">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="461" y="225" key="SettingsEditor/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600395885849" />
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600409527591">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600409527591" />
     <state x="1920" y="0" width="1575" height="798" maximized="true" key="dock-window-1" timestamp="1600396229378">
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
@@ -86,5 +92,17 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="740" y="293" key="git4idea.branch.GitSmartOperationDialog/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396175265" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/index.ts</url>
+          <line>97</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

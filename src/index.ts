@@ -1,12 +1,10 @@
 import {GuildMember, Message, Client as DiscordClient} from "discord.js";
 import * as dotenv from "dotenv";
-import {MongoClient} from "mongodb";
+import {MongoClient, ObjectId} from "mongodb";
 import ServerConstants from "./server-constants";
-
 dotenv.config();
 
 const bot = new DiscordClient();
-
 
 const commandCooldown = new Set();
 const landonCooldown = new Set();
@@ -17,20 +15,9 @@ const mongodbPassword = process.env.MONGO_DATABASE_PASSWORD;
 const mongodbName = process.env.MONGO_DATABASE_DB_NAME;
 const connectionString = `mongodb+srv://Wc6a4MhgWkQkc2u2x8:${mongodbPassword}@sorryehcluster.tqfuh.azure.mongodb.net/${mongodbName}?retryWrites=true&w=majority`;
 
-
-
-// Retrieve
-//const MongoClient = require('mongodb').MongoClient;
-
-
-
-
-
 bot.on('ready', () => {
-
     console.log('This bot is online!');
-
-})
+});
 
 //auto roles
 bot.on('guildMemberAdd', member => {
@@ -45,11 +32,10 @@ bot.on('guildMemberAdd', member => {
     // @ts-ignore
     channel.send(`Welcome to the server, ${member}`);
 
-    member.roles.set(['643678930754076712'])
+    member.roles.set([ServerConstants.GARBORATOR_ROLE])
         .then(console.log)
         .catch(console.error);
-})
-
+});
 
 bot.on('message', msg => {
     if (msg.content === "HELLO") {
@@ -66,7 +52,7 @@ bot.on('message', msg => {
             }, 60000);
         }
     }
-})
+});
 
 
 /*
@@ -82,92 +68,45 @@ bot.on('message', msg => {
 */
 
 bot.on('message', msg => {
-    if(msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongo") {
+    if(msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongoKayden") {
         //connect to client
-        console.log("point 1");
-
         const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
-       
-        console.log("Point 2");
-        client.connect(async err => {
 
-            console.log("Point 3");
+        client.connect(async err => {
             const collection = await client.db("game").collection("gameCollection");
-
-            console.log("point 4");
-
-
-        })
-
-        client.close();
-    }
-})
-
-/*
-bot.on('message', msg => {
-    if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongo") {
-        client.connect(async err => {
-
-                const collection = await client.db("game").collection("gameCollection");
-                const outPut = await collection.find().toArray();
-                console.log(outPut)
-                msg.reply(`You have ${outPut[0].points} points`)
-                
-                
-                console.log("It works");
-
-
+            const outPut = await collection.find().toArray();
+            await msg.reply(`You have ${outPut[0].points} points`);
         });
+
+        client.close()
+            .catch(msg => {
+                console.log("Bro you borked it")
+            });
     }
 })
-*/
 
 bot.on('message', msg => {
     if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongoAddPoints") {
-            //connect to client
-            const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
-
+        //connect to client
+        const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
         client.connect(async err => {
+            const collection = await client.db("game").collection("gameCollection");
 
-            /*
-           await pointSchema.findOneAndUpdate(
-                {_id: '5f631363aa7d05d7547c6d61' },
-                {points: 10}
-            )
-            */
-            /*
-            try {
-                const collection = await client.db("game").collection("gameCollection");
-                collection.findOneAndUpdate({
-                    filter: { _id : { $eq : '5f631363aa7d05d7547c6d61' }},
-                    update: { $set : {'points': 10 }}
-                }).then(console.log("foo")).catch(console.log());    
-            }
-            */
-            /*
-            try{
-                const collection = await client.db("game").collection("gameCollection");
-                collection.findOneAndUpdate(
-                    {_id : '5f631363aa7d05d7547c6d61'},
-                    {points : 10}
-                    ).then(console.log('foo'));
-            }
-            catch (err) {
-                console.log(err);
-            }
-            
+            const points = await collection.find().toArray();
 
-            */
-
-            //console.log(outPut)
-            msg.reply(`You have added 10 points`)
-            //perform actions on the collection object
-            //client.close();
+            collection.update({ _id: new ObjectId("5f631363aa7d05d7547c6d61") }, { points: points[0].points + 10 })
+                .then((value) => {
+                    console.log(value);
+                });
         });
-    }
-})
 
+        client.close()
+            .catch(msg => {
+                console.log("Bro you borked it")
+            });
+    }
+});
 
 bot.on('message', msg => {
     var d = new Date(); //current time
@@ -178,7 +117,6 @@ bot.on('message', msg => {
         //msg.reply('Mock Landon');
         msg.reply(d.getHours());
     }
-})
-
+});
 
 bot.login(token);

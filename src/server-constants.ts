@@ -5,6 +5,7 @@ export default class ServerConstants {
 
     //roles
     public static POUTINE_ROLE = "481987772043755530";
+    public static GARBORATOR_ROLE = "643678930754076712";
 
     //static
     
