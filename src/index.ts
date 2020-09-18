@@ -1,16 +1,13 @@
-const Discord = require('discord.js');
-const { mongo } = require('mongoose');
-const dotenv = require('dotenv');
+import {GuildMember, Message, Client as DiscordClient} from "discord.js";
+import * as dotenv from "dotenv";
+import {MongoClient} from "mongodb";
+import ServerConstants from "./server-constants";
+
 dotenv.config();
 
-const bot = new Discord.Client();
+const bot = new DiscordClient();
 
-//users
-const Landon = "140205912727093248";
-const Tanner = "379807275877138443";
 
-//roles
-const rolePoutine = "481987772043755530";
 
 const commandCooldown = new Set();
 const landonCooldown = new Set();
@@ -20,7 +17,7 @@ const token = process.env.DISCORD_TOKEN;
 const connectionString = process.env.MONGO_DATABASE_PASSWORD;
 
 // Retrieve
-const MongoClient = require('mongodb').MongoClient;
+//const MongoClient = require('mongodb').MongoClient;
 const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
@@ -42,6 +39,7 @@ bot.on('guildMemberAdd', member => {
     }
 
     console.log(`Welcome to the server, ${member}`);
+    // @ts-ignore
     channel.send(`Welcome to the server, ${member}`);
 
     member.roles.set(['643678930754076712'])
@@ -81,27 +79,24 @@ bot.on('message', msg => {
 */
 
 bot.on('message', msg => {
-    if (msg.member._roles.some(r => r === rolePoutine) && msg.content === "!mongo") {
+    if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongo") {
         client.connect(async err => {
-            try {
+
                 const collection = await client.db("game").collection("gameCollection");
                 const outPut = await collection.find().toArray();
                 console.log(outPut)
                 msg.reply(`You have ${outPut[0].points} points`)
                 
-                // perform actions on the collection object
-            }
-            catch (err) {
-                console.log(err);
-            }
+                
+                console.log("It works");
 
-            //client.close();
+
         });
     }
 })
 
 bot.on('message', msg => {
-    if (msg.member._roles.some(r => r === rolePoutine) && msg.content === "!mongoAddPoints") {
+    if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongoAddPoints") {
 
 
         client.connect(async err => {
@@ -121,7 +116,7 @@ bot.on('message', msg => {
                 }).then(console.log("foo")).catch(console.log());    
             }
             */
-
+            /*
             try{
                 const collection = await client.db("game").collection("gameCollection");
                 collection.findOneAndUpdate(
@@ -134,7 +129,7 @@ bot.on('message', msg => {
             }
             
 
-
+            */
 
             //console.log(outPut)
             msg.reply(`You have added 10 points`)
@@ -150,7 +145,7 @@ bot.on('message', msg => {
     //console.log('Here');
     console.log(d.getHours());
     //console.log(msg.member._roles);
-    if (msg.member._roles.some(r => r === rolePoutine) && msg.content === "!serverTime") {
+    if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!serverTime") {
         //msg.reply('Mock Landon');
         msg.reply(d.getHours());
     }
