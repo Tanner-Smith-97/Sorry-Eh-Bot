@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2f759896-1ec3-4ad3-bb75-aa180f3495b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600395781673</updated>
       <workItem from="1600395782743" duration="686000" />
-      <workItem from="1600447653355" duration="3564000" />
+      <workItem from="1600447653355" duration="3776000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed issue with mongo not being able to update the value">
       <created>1600410784438</created>
@@ -94,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600450856531</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add start script to npm">
+      <created>1600453062713</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600453062713</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +111,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed issue with mongo not being able to update the value" />
     <MESSAGE value="Update heroku Procfile&#10;Add npm commands to idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update heroku Procfile&#10;Add npm commands to idea" />
+    <MESSAGE value="Add start script to npm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add start script to npm" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="235" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600450831714">
@@ -114,10 +123,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="734" y="382" key="#com.intellij.fileTypes.FileTypeChooser/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600396338127" />
-    <state x="585" y="148" key="CommitChangelistDialog2" timestamp="1600450856121">
+    <state x="585" y="148" key="CommitChangelistDialog2" timestamp="1600453062328">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="585" y="148" key="CommitChangelistDialog2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600450856121" />
+    <state x="585" y="148" key="CommitChangelistDialog2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600453062328" />
     <state width="1899" height="396" key="GridCell.Tab.0.bottom" timestamp="1600411318483">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -186,10 +195,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="461" y="225" key="SettingsEditor/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600395885849" />
-    <state x="552" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600450859986">
+    <state x="552" y="300" key="Vcs.Push.Dialog.v2" timestamp="1600453063948">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="300" key="Vcs.Push.Dialog.v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600450859986" />
+    <state x="552" y="300" key="Vcs.Push.Dialog.v2/1909.-1200.1920.1160/1920.0.1920.1160/-11.-1200.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1600453063948" />
     <state x="777" y="494" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600448374608">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
