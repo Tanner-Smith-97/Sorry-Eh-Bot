@@ -67,6 +67,8 @@ bot.on('message', msg => {
 })
 */
 
+
+//reads from DB
 bot.on('message', msg => {
     if(msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongoKayden") {
         //connect to client
@@ -99,6 +101,8 @@ bot.on('message', msg => {
     }
 })
 
+
+//adds points to DB
 bot.on('message', msg => {
     if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!mongoAddPoints") {
         //connect to client
@@ -125,10 +129,11 @@ bot.on('message', msg => {
 bot.on('message', msg => {
     var d = new Date(); //current time
     //console.log('Here');
-    console.log(d.getHours());
+
     //console.log(msg.member._roles);
     if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) && msg.content === "!serverTime") {
         //msg.reply('Mock Landon');
+        console.log(d.getHours());
         msg.reply(d.getHours());
     }
 });
