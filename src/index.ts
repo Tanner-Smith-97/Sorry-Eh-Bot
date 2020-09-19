@@ -74,14 +74,12 @@ bot.on('message', msg => {
         //connect to client
         const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
-        console.log("Point 2");
         client.connect(async err => {
 
-            console.log("Point 3");
             const collection = await client.db("game").collection("gameCollection");
-            console.log("point 4");
+
             const outPut = await collection.find().toArray();
-            console.log("point 5");
+
             console.log(outPut);
 
             msg.reply(`You have ${outPut[0].points} points`);
