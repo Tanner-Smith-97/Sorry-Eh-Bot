@@ -12,11 +12,13 @@
   "author": "Tanner",
   "license": "ISC",
   "dependencies": {
+    "@types/bent": "^7.3.2",
     "@types/express": "^4.17.11",
     "@types/mocha": "^8.2.1",
     "@types/mongodb": "^3.5.27",
     "@types/node": "^14.11.1",
     "@types/ws": "^7.2.6",
+    "bent": "^7.3.12",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

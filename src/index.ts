@@ -1,3 +1,4 @@
+import bent from "bent";
 import { GuildMember, Message, Client as DiscordClient } from "discord.js";
 import { MongoClient, ObjectId } from "mongodb";
 import app from './app';
@@ -175,6 +176,15 @@ bot.on('message', msg => {
         //msg.reply('Mock Landon');
         console.log(d.getHours());
         msg.reply(d.getHours());
+    }
+});
+
+bot.on('message', async (msg) => {
+    if (msg.content === "!getBent") {
+        const get = bent("https://inspirobot.me/api?generate=true", "GET", "string", 200);
+        const response = await get("");
+
+        msg.reply(response);
     }
 });
 
