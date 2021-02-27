@@ -4,6 +4,7 @@ import { MongoClient, ObjectId } from "mongodb";
 import app from './app';
 import PlayerModel from "./player-model";
 import ServerConstants from "./server-constants";
+import WeebController from "./weeb-wednessday/weeb";
 
 const port = process.env.PORT || 3000;
 
@@ -31,6 +32,9 @@ const connectionString = `mongodb+srv://Wc6a4MhgWkQkc2u2x8:${mongodbPassword}@so
 bot.on('ready', () => {
     console.log('This bot is online!');
 });
+
+const weeb = new WeebController(bot);
+
 
 //auto roles
 bot.on('guildMemberAdd', member => {
@@ -64,6 +68,15 @@ bot.on('message', msg => {
                 commandCooldown.delete(msg.author.id);
             }, 60000);
         }
+    }
+});
+
+bot.on('message', async msg => {
+    if (msg.content === "!weebeningBegin") {
+        weeb.createChannel();
+    }
+    else if (msg.content === "!weebeningEnd") {
+        await weeb.removeChannel();
     }
 });
 
