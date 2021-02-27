@@ -72,11 +72,13 @@ bot.on('message', msg => {
 });
 
 bot.on('message', async msg => {
-    if (msg.content === "!weebeningBegin") {
+    if (msg.content === "!letTheWeebeningBegin") {
         weeb.createChannel();
+        await msg.reply("Attempting to create the weebiest of weebs");
     }
-    else if (msg.content === "!weebeningEnd") {
+    else if (msg.content === "!letTheWeebeningEnd") {
         await weeb.removeChannel();
+        await msg.reply("No one will know what happened here.");
     }
 });
 
@@ -195,9 +197,8 @@ bot.on('message', msg => {
 bot.on('message', async (msg) => {
     if (msg.content === "!getBent") {
         const get = bent("https://inspirobot.me/api?generate=true", "GET", "string", 200);
-        const response = await get("");
-
-        msg.reply(response);
+        const response = await get("") as string;
+        await msg.reply(response);
     }
 });
 
