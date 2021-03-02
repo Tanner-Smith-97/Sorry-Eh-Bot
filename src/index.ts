@@ -90,6 +90,10 @@ bot.on('message', async msg => {
         else if (msg.content === "!disableWeebs") {
             await weeb.disableChannel(msg.guild);
         }
+        else if (msg.content === "!weebStatus") {
+            await msg.reply(`The current status of Weeb Wednesday is ${weeb.isChannelEnabled}.`);
+            await msg.reply(`The weeb timer is currently ${WeebTimer.weebTimerIsRunning ? '' : 'NOT'} running.`);
+        }
     }
 });
 
