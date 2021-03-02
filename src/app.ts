@@ -1,5 +1,8 @@
 import express from 'express';
 
+//this mounts the program to the assosiated port
+//provides a json object on http get
+//All this is for Heroku
 class App {
     public expressServer;
 

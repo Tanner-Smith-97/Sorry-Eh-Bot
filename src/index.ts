@@ -4,6 +4,7 @@ import { MongoClient, ObjectId } from "mongodb";
 import app from './app';
 import PlayerModel from "./player-model";
 import ServerConstants from "./server-constants";
+import WeebTimer from "./weeb-wednessday/weeb-timer";
 import WeebController from "./weeb-wednessday/weeb";
 
 const port = process.env.PORT || 3000;
@@ -34,7 +35,7 @@ bot.on('ready', () => {
 });
 
 const weeb = new WeebController(bot);
-
+const weebTimer = new WeebTimer();
 
 //auto roles
 bot.on('guildMemberAdd', member => {
@@ -76,10 +77,12 @@ bot.on('message', async msg => {
         if (msg.content === "!letTheWeebeningBegin") {
             await weeb.createChannel(msg.guild);
             await msg.reply("Attempting to create the weebiest of weebs");
+            weebTimer.start(weeb, msg.guild);
         }
         else if (msg.content === "!letTheWeebeningEnd") {
             await weeb.removeChannel();
             await msg.reply("No one will know what happened here.");
+            weebTimer.stop();
         }
         else if (msg.content === "!enableWeebs") {
             await weeb.enableChannel(msg.guild);
