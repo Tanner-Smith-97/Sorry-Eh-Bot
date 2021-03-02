@@ -72,13 +72,21 @@ bot.on('message', msg => {
 });
 
 bot.on('message', async msg => {
-    if (msg.content === "!letTheWeebeningBegin") {
-        weeb.createChannel();
-        await msg.reply("Attempting to create the weebiest of weebs");
-    }
-    else if (msg.content === "!letTheWeebeningEnd") {
-        await weeb.removeChannel();
-        await msg.reply("No one will know what happened here.");
+    if (msg.member.roles.cache.has(ServerConstants.POUTINE_ROLE) || msg.member.roles.cache.has(ServerConstants.TEST_SERVER_POUTINE_ROLE)) {
+        if (msg.content === "!letTheWeebeningBegin") {
+            await weeb.createChannel(msg.guild);
+            await msg.reply("Attempting to create the weebiest of weebs");
+        }
+        else if (msg.content === "!letTheWeebeningEnd") {
+            await weeb.removeChannel();
+            await msg.reply("No one will know what happened here.");
+        }
+        else if (msg.content === "!enableWeebs") {
+            await weeb.enableChannel(msg.guild);
+        }
+        else if (msg.content === "!disableWeebs") {
+            await weeb.disableChannel(msg.guild);
+        }
     }
 });
 
